@@ -13,6 +13,7 @@ def start_server
 
   #caps["realDevice"] = true
 
+  @appium_driver = Selenium::WebDriver.for :remote
   @appium_driver = RemoteWebDriver::Driver.new({
     "caps" => caps,
     "appium_lib" => {
