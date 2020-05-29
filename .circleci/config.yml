@@ -17,4 +17,6 @@ jobs:
       - run: npm install appium
       - run: gem install bundler:2.1.4
       - run: bundle install
-      - run: bundle exec cucumber -p web
+      - run: appium -a 127.0.0.1 -p 4723
+      - run: emulator -avd circleci-android29
+      - run: bundle exec cucumber -p mobile
