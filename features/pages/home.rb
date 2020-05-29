@@ -20,6 +20,7 @@ def start_server
     #@driver = Selenium::WebDriver.new :chrome
     #@driver = Selenium::WebDriver.for(url => "http:127.0.0.1:9515/wd/hub")
     @driver = Selenium::WebDriver.for :chrome
+    sleep 20
     @driver.manage.window.maximize
 end
 
