@@ -1,4 +1,5 @@
 GEM
+  remote: https://rubygems.org/
   specs:
     backports (3.17.2)
     builder (3.2.4)
@@ -32,6 +33,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  builder
   cucumber
   selenium-webdriver
 
