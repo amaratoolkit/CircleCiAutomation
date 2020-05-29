@@ -1,6 +1,6 @@
 require 'selenium-webdriver'
 require 'rubygems'
-#require "chromedriver-helper"
+require "chromedriver-helper"
 class HomePage
 
 def start_server
