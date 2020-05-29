@@ -16,7 +16,7 @@ def start_server
     # @driver = Selenium::WebDriver.for(:remote,
     #   :url => "http:127.0.0.1:4444/wd/hub",
     #   :desired_capabilities => caps)
-    # profile = Selenium::WebDriver::Chrome::Profile.new
+    profile = Selenium::WebDriver::Chrome::Profile.new
     @driver = Selenium::WebDriver.new :chrome,:profile => profile
     @driver = Selenium::WebDriver.for(url => "http:127.0.0.1:9515/wd/hub", :profile => profile )
     @driver = Selenium::WebDriver.for :chrome
