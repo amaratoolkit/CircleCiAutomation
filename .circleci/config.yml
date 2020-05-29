@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  ruby: circleci/ruby@0.1.2 
+  ruby: circleci/ruby@0.1.2
 
 jobs:
   build:
@@ -11,4 +11,4 @@ jobs:
       - checkout
       - run: gem install bundler:2.1.4
       - run: bundle install
-      - run: cucumber
+      - run: bundle exec cucumber
