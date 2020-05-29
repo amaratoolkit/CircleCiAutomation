@@ -5,7 +5,7 @@ class HomePage
 
 def start_server
     #@driver=Selenium::WebDriver.for :safari
-    Selenium::WebDriver::Chrome::Service.executable_path="drivers/chromedriver"
+    Selenium::WebDriver::Chrome::Service.driver_path="drivers/chromedriver"
     # Input capabilities
     # caps = Selenium::WebDriver::Remote::Capabilities.new
     # caps['browser'] = 'Safari'
