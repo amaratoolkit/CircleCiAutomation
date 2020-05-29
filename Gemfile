@@ -1,3 +1,3 @@
 gem 'selenium-webdriver'
 gem 'cucumber'
-gem 'builder'
+gem 'builder', '2.1.4'
