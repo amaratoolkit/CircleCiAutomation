@@ -13,7 +13,7 @@ def start_server
 
   #caps["realDevice"] = true
 
-  @appium_driver = Appium::Driver.new({
+  @appium_driver = RemoteWebDriver::Driver.new({
     "caps" => caps,
     "appium_lib" => {
       :server_url => "http://127.0.0.1:4723/wd/hub",
