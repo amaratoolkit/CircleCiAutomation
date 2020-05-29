@@ -14,6 +14,7 @@ jobs:
     executor: ruby/default
     steps:
       - checkout
+      - run: npm install appium
       - run: gem install bundler:2.1.4
       - run: bundle install
-      - run: bundle exec cucumber -p console
+      - run: bundle exec cucumber -p mobile
