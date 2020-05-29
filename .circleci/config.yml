@@ -17,4 +17,4 @@ jobs:
           requires:
             - checkout
             -run:
-            command: cucumber
+            test: cucumber
