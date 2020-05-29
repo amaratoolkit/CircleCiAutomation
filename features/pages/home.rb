@@ -4,7 +4,8 @@ require 'rubygems'
 class HomePage
 
 def start_server
-    @driver=Selenium::WebDriver.for :safari
+    #@driver=Selenium::WebDriver.for :chrome
+  Selenium::WebDriver::Chrome::Service.driver_path="drivers/chromedriver"
     # Input capabilities
     # caps = Selenium::WebDriver::Remote::Capabilities.new
     # caps['browser'] = 'Safari'
@@ -15,7 +16,7 @@ def start_server
     # @driver = Selenium::WebDriver.for(:remote,
     #   :url => "http:127.0.0.1:4444/wd/hub",
     #   :desired_capabilities => caps)
-
+    @driver = Selenium::WebDriver.for :chrome
     @driver.manage.window.maximize
 end
 
