@@ -1,3 +1,4 @@
+@web
 Feature: As an user I want to see Welcome message
 
 @Test1

@@ -1,0 +1,2 @@
+web: -t @web
+mobile: -t @mobile
