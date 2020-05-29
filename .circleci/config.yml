@@ -19,4 +19,5 @@ jobs:
       - run: bundle install
       - run: appium -a 127.0.0.1 -p 4723
       - run: emulator -avd circleci-android29
+      - run: circle-android wait-for-boot
       - run: bundle exec cucumber -p mobile
