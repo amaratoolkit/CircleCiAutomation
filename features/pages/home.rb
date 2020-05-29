@@ -4,12 +4,8 @@ require 'rubygems'
 class HomePage
 
 def start_server
-<<<<<<< HEAD
     #@driver=Selenium::WebDriver.for :chrome
   Selenium::WebDriver::Chrome::Service.driver_path="drivers/chromedriver"
-=======
-    @driver=Selenium::WebDriver.for :chrome
->>>>>>> 139f24bece025979840ac33167aee6633779f272
     # Input capabilities
     # caps = Selenium::WebDriver::Remote::Capabilities.new
     # caps['browser'] = 'Safari'
