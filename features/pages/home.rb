@@ -17,7 +17,7 @@ def start_server
     #   :url => "http:127.0.0.1:4444/wd/hub",
     #   :desired_capabilities => caps)
     #profile = Selenium::WebDriver::Chrome::Profile
-    @driver = Selenium::WebDriver.new :chrome
+    #@driver = Selenium::WebDriver.new :chrome
     @driver = Selenium::WebDriver.for(url => "http:127.0.0.1:9515/wd/hub")
     @driver = Selenium::WebDriver.for :chrome
     @driver.manage.window.maximize
