@@ -11,17 +11,13 @@ jobs:
         working_directory: ~/CircleCiAutomation
         docker:
             - image: circleci/ruby:2.6.3-stretch-node
+            - image: circleci/android:api-29
+            - image: circleci/ruby:2.7.1
         steps:
             - checkout
             - run: npm install appium
             - run: gem install bundler:2.1.4
             - run: bundle install
-    sanity-test:
-        working_directory: ~/CircleCiAutomation
-        docker:
-            - image: circleci/android:api-29
-            - image: circleci/ruby:2.7.1
-        steps:
             - run:
                 name: Install libs for libpulse
                 command: |
