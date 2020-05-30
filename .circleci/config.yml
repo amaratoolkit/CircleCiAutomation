@@ -10,7 +10,7 @@ jobs:
     build:
         working_directory: ~/CircleCiAutomation
         docker:
-            - image: circleci/ruby:2.7.1
+            - image: circleci/ruby:2.6.3-stretch-node
         steps:
             - checkout
             - run: npm install appium
