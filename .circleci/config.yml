@@ -12,7 +12,6 @@ jobs:
         docker:
             - image: circleci/ruby:2.6.3-stretch-node
             - image: circleci/android:api-29
-            - image: circleci/ruby:2.7.1
         steps:
             - checkout
             - run: npm install appium
@@ -29,8 +28,8 @@ jobs:
                 command: sdkmanager --list --verbose | grep system-images
             - run:
                 name: Setup Emulator
-                command: sdkmanager "system-images;android-24;default;armeabi-v7a" && echo
-                    "no" | avdmanager create avd -n test -k "system-images;android-24;default;armeabi-v7a"
+                command: sdkmanager "system-images;android-29;default;armeabi-v7a" && echo
+                    "no" | avdmanager create avd -n test -k "system-images;android-29;default;armeabi-v7a"
             - run:
                 name: Launch Emulator
                 command: |
