@@ -1,4 +1,11 @@
-version: 2
+version: 2.1
+orbs:
+  ruby: circleci/ruby@0.1.2
+
+environment:
+  # Customize the JVM maximum heap limit
+ANDROID_HOME: /usr/local/android-sdk-linux
+
 jobs:
     build:
         working_directory: ~/CircleCiAutomation
