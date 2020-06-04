@@ -68,7 +68,7 @@ jobs:
             - checkout
             - run:
                 name: Install APK
-                command: adb install <Your_Application>.apk
+                command: adb install naukri.apk
             - run:
                 name: Run Tests
                 command: bundle exec cucumber -p mobile

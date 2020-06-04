@@ -1,7 +1,7 @@
 require 'selenium-webdriver'
 require 'rubygems'
 require "webdrivers"
-class HomePage
+class LaunchPage
 
 def start_server
     @driver=Selenium::WebDriver.for :safari
