@@ -52,8 +52,8 @@ jobs:
                   fi
 
 # run tests!
-            - run: ./gradlew test
-              - checkout
+            #- run: ./gradlew test
+            #  - checkout
             - run:
                 name: Install APK
                 command: adb install naukri.apk
