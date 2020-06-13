@@ -13,8 +13,8 @@ def start_server
 
   #caps["realDevice"] = true
 
-  @appium_driver = Selenium::WebDriver.for :remote
-  @appium_driver = RemoteWebDriver::Driver.new({
+  #@appium_driver = Selenium::WebDriver.for :remote
+  @appium_driver = Appium::Driver.new({
     "caps" => caps,
     "appium_lib" => {
       :server_url => "http://127.0.0.1:4723/wd/hub",
@@ -30,7 +30,7 @@ def login
   @wait.until { @appium_driver.find_element(:id, "b_login").displayed? }
 
   @appium_driver.find_element(:id, "b_login").click
-
+  sleep 5
   @appium_driver.find_element(:id, "et_email").send_keys "sivakolli"
   @appium_driver.find_element(:id, "et_password").send_keys "123456"
 end
@@ -44,6 +44,6 @@ end
 #   puts "Test Failed"
 # end
 def kill_server
-  @driver.quit
+  @appium_driver.quit
 end
 end
