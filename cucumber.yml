@@ -1,3 +1,4 @@
 web: -t @web
 mobile: -t @mobile
 console: -t @console
+docker: -t @docker
