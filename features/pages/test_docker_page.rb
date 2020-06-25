@@ -16,7 +16,7 @@ class DockerPage
 
   def navigateToPages()
     puts("navigateToPages")
-    sleep 5
+    sleep 3
     @driver.find_element(:xpath, "//a[@title='Log in to your customer account']").click()
     sleep 5
     @driver.find_element(:xpath, "//*[@id='email']").send_keys "testing username"

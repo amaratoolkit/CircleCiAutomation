@@ -1,7 +1,7 @@
 @docker
 Feature: As an user I want to see Welcome message
 
-Scenario: Verify signature on web
-Given Login as admin
-When Navigate to pages
-Then Sign on the webpage
+Scenario: Verify error messages of username input and password input
+Given Enter given url and click on signin link
+When Enter incorrect username and incorrect password
+Then Verify error messages
