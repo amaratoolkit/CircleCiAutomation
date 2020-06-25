@@ -9,16 +9,7 @@ jobs:
         working_directory: ~/CircleCiAutomation
         docker:
             - image: circleci/ruby:2.6.3-stretch-node
-            - image: codeception/codeceptjs
-            depends_on:
-              - chrome
-            volumes:
-              - .:/tests
-        chrome:
-          image: selenium/standalone-chrome:3.8.1-bohrium
-          ports:
-            - '4444'
-            - '5900'
+            - image: selenium/standalone-chrome-debug:3.141.59-20200525
         steps:
             - checkout
             - run: npm install appium
