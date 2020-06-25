@@ -3,64 +3,15 @@ orbs:
   ruby: circleci/ruby@0.1.2
 
 environment:
-  # Customize the JVM maximum heap limit
-ANDROID_HOME: /usr/local/android-sdk-linux
 
 jobs:
     build:
         working_directory: ~/CircleCiAutomation
         docker:
             - image: circleci/ruby:2.6.3-stretch-node
-            - image: circleci/android:api-29
         steps:
             - checkout
             - run: npm install appium
             - run: gem install bundler:2.1.4
             - run: bundle install
-                # Generate apk
-          #  - run: gradle wrapper
-        environment:
-              JVM_OPTS: -Xmx3200m
-          steps:
-            - checkout
-            - restore_cache:
-                key: jars-{{ checksum "build.gradle" }}-{{ checksum  "browserstack_android_sample/build.gradle" }}
-#      - run:
-#         name: Chmod permissions #if permission for Gradlew Dependencies fail, use this.
-#         command: sudo chmod +x ./gradlew
-          - run:
-              name: Download Dependencies
-              command: ./gradlew androidDependencies
-          - save_cache:
-              paths:
-                - ~/.gradle
-                key: jars-{{ checksum "build.gradle" }}-{{ checksum  "browserstack_android_sample/build.gradle" }}
-          - run: ./gradlew assembleDebug
-
-# Upload app to BrowserStack and set app url in an environment variable.
-# Here replace app-debug.apk with name of your apk.
-            - run:
-                name : App upload and Set app id in environment variable.
-                command : |
-                  APP_UPLOAD_RESPONSE=$(curl -u "siva518:UQZfAXgr43CUqsZKxhF6" -X POST https://api-cloud.browserstack.com/app-automate/upload -F "file=@/mobile_apps/naukri.apk")
-                  APP_ID=$(echo $APP_UPLOAD_RESPONSE | jq -r ".app_url")
-                  if [ $APP_ID != null ]; then
-                  echo "Apk uploaded to BrowserStack with app id : ",$APP_ID;
-                  echo "export BROWSERSTACK_APP_ID=$APP_ID" >> $BASH_ENV;
-                  source $BASH_ENV;
-                  echo "Setting value of BROWSERSTACK_APP_ID in environment variables to  ",$APP_ID;
-                  else
-                  UPLOAD_ERROR_MESSAGE=$(echo $APP_UPLOAD_RESPONSE | jq -r ".error")
-                  echo "App upload failed, reason : ",$UPLOAD_ERROR_MESSAGE
-                  exit 1;
-                  fi
-
-# run tests!
-            #- run: ./gradlew test
-            #  - checkout
-            - run:
-                name: Install APK
-                command: adb install naukri.apk
-            - run:
-                name: Run Tests
-                command: bundle exec cucumber -p mobile
+            - run: bundle exec cucumber -p web
