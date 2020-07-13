@@ -6,7 +6,7 @@ class MobileLogin
 def start_server
   caps = {}
   caps["name"] = "Ruby Appium Example"
-  caps["deviceName"] = "amsung Galaxy S10e"
+  caps["deviceName"] = "Samsung Galaxy S10e"
   caps["platformName"] = "Android"
   caps["version"] = "9.0"
   caps["build"] = "Android Test"
