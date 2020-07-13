@@ -13,7 +13,7 @@ def start_server
  caps["project"] = "Naukri"
  caps["name"] = "Sample Test"
   #caps["app"] = "mobile_apps/naukri.apk"
-  caps["app"] = "bs://e85129c8ea86099f3d7abb096d287f1decc1ecd1"
+  caps["app"] = "MyTestNaukri"
   #caps["realDevice"] = true
 #:server_url => "http://127.0.0.1:4723/wd/hub",
   #@appium_driver = Selenium::WebDriver.for :remote
