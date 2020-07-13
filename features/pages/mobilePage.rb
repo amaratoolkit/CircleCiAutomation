@@ -13,6 +13,7 @@ def start_server
  caps["project"] = "Naukri"
  caps["name"] = "Sample Test"
   #caps["app"] = "mobile_apps/naukri.apk"
+  caps["newCommandTimeout"] = 500
   caps["app"] = "MyTestNaukri"
   #caps["realDevice"] = true
 #:server_url => "http://127.0.0.1:4723/wd/hub",
