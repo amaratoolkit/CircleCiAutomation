@@ -6,18 +6,21 @@ class MobileLogin
 def start_server
   caps = {}
   caps["name"] = "Ruby Appium Example"
-  caps["deviceName"] = "Galaxy S10"
+  caps["deviceName"] = "amsung Galaxy S10e"
   caps["platformName"] = "Android"
-  caps["version"] = "10.0"
-  caps["app"] = "mobile_apps/naukri.apk"
-
+  caps["version"] = "9.0"
+  caps["build"] = "Android Test"
+ caps["project"] = "Naukri"
+ caps["name"] = "Sample Test"
+  #caps["app"] = "mobile_apps/naukri.apk"
+  caps["app"] = "bs://e85129c8ea86099f3d7abb096d287f1decc1ecd1"
   #caps["realDevice"] = true
-
+#:server_url => "http://127.0.0.1:4723/wd/hub",
   #@appium_driver = Selenium::WebDriver.for :remote
   @appium_driver = Appium::Driver.new({
     "caps" => caps,
     "appium_lib" => {
-      :server_url => "http://127.0.0.1:4723/wd/hub",
+      :server_url => "http://siva518:UQZfAXgr43CUqsZKxhF6@hub.browserstack.com:80/wd/hub",
     },
   }, true)
   @appium_driver = @appium_driver.start_driver
