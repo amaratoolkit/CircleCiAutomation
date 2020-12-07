@@ -12,9 +12,7 @@ jobs:
             - image: selenium/standalone-chrome-debug:3.141.59-20200525
         steps:
             - checkout
-            - run: npm install appium
             - run: gem install bundler:2.1.4
             - run: bundle install
             - run: bundle exec cucumber -p mobile
-            - store_artifacts:
-              path: tmp/screenshots
+            
