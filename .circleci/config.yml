@@ -14,10 +14,6 @@ jobs:
             - checkout
             - run: gem install bundler:2.1.4
             - run: bundle install
-            - run: bundle exec cucumber -p docker -f pretty -f html -o ~/test-results/cucumber/cucumber.html
-            - run: bundle exec cucumber -p mobile -f pretty -f html -o ~/test-results/cucumber/cucumber.html
-
-            - store_test_results:
-                   path: ~/test-results/cucumber/
-            
+            - run: bundle exec cucumber -p docker
+            - run: bundle exec cucumber -p mobile
             
