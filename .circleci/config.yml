@@ -16,6 +16,6 @@ jobs:
             - run: bundle install
             - run: bundle exec cucumber -p docker -f pretty -f html -o ~/test-results/cucumber/cucumber.html
             - run: bundle exec cucumber -p mobile -f pretty -f html -o ~/test-results/cucumber/cucumber.html
-            - store_test_results:path: ~/test-results/cucumber/
+            - store_test_results_path: ~/test-results/cucumber/
             
             
