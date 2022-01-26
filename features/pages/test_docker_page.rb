@@ -9,7 +9,7 @@ class DockerPage
     # @driver.navigate.to "http://automationpractice.com/index.php"
     caps = Selenium::WebDriver::Remote::Capabilities.send('chrome')
     # @driver = Selenium::WebDriver.for(:remote, url: "http://0.0.0.0:4444/wd/hub", desired_capabilities: caps)
-    @driver = Selenium::WebDriver.for(:remote, url: 'http://siva266:7Wfwz8qNKAn9X4XyNTXE@hub.browserstack.com:80/wd/hub', desired_capabilities: caps)
+    @driver = Selenium::WebDriver.for(:remote, url: 'http://sivakolli_aipa4i:8MZSbx6Y8RsspGzMTRsr@hub.browserstack.com:80/wd/hub', desired_capabilities: caps)
     @driver.manage.window.maximize
     @driver.navigate.to 'http://automationpractice.com/index.php'
   end
