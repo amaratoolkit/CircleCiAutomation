@@ -11,7 +11,7 @@ class MobileLogin
     caps['project'] = 'Naukri'
     caps['name'] = 'Login Scenario'
     caps['version'] = '9.0'
-    caps['app'] = 'bs://dec1ce85b1ea98d4e0b0a6ba01417a18c650c6ee'
+    caps['app'] = 'bs://b6ccc3b521ca1063adf2e05778e6ac05e0ae75e5'
 
     # caps["realDevice"] = true
 
@@ -19,7 +19,7 @@ class MobileLogin
     @appium_driver = Appium::Driver.new({
                                           'caps' => caps,
                                           'appium_lib' => {
-                                            server_url: 'http://siva266:7Wfwz8qNKAn9X4XyNTXE@hub.browserstack.com:80/wd/hub'
+                                            server_url: 'http://sivakolli_aipa4i:8MZSbx6Y8RsspGzMTRsr@hub.browserstack.com:80/wd/hub'
                                           }
                                         }, true)
     @appium_driver = @appium_driver.start_driver
