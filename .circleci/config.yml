@@ -16,6 +16,8 @@ jobs:
             - run: bundle install
             - run: bundle exec cucumber -p docker
             - run: bundle exec cucumber -p mobile
+            - store_test_results:
+                path: ~/cucumber
             - store_artifacts:
-                path: test
+                path: ~/cucumber
          
