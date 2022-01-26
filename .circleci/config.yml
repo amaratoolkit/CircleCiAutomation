@@ -20,7 +20,7 @@ jobs:
                 name: Save test results
                 command: |
                   mkdir -p ~/cucumber
-                  bundle exec cucumber --format pretty --format json --out ~/cucumber/tests.cucumber
+                  bundle exec cucumber --format pretty --format html --out ~/cucumber/tests.html
                 when: always
             - store_test_results:
                 path: ~/cucumber
