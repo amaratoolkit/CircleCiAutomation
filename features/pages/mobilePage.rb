@@ -11,7 +11,7 @@ class MobileLogin
     caps['project'] = 'Naukri'
     caps['name'] = 'Login Scenario'
     caps['version'] = '9.0'
-    caps['app'] = 'bs://b6ccc3b521ca1063adf2e05778e6ac05e0ae75e5'
+    caps['app'] = 'bs://6cd43c9726b5ad40dd8197b841d3b1a79470bd2b'
 
     # caps["realDevice"] = true
 
