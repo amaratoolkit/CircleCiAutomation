@@ -18,7 +18,7 @@ end
 
 def get_title
   @driver.title
-  #puts("title=== #{@driver.title}" )
+  puts("title=== #{@driver.title}" )
 end
 
 
