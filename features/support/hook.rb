@@ -1,6 +1,7 @@
 require 'selenium-webdriver'
 require 'rubygems'
 require "webdrivers"
+require "report_builder"
 
 
 Before do
