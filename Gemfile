@@ -7,3 +7,4 @@ gem 'appium_lib'
 gem 'parallel_tests'
 gem 'webdrivers'
 gem 'capybara'
+gem "reportportal"
