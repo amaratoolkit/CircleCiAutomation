@@ -1,0 +1,98 @@
+[
+  {
+    "uri": "features/test_docker.feature",
+    "id": "as-an-user-i-want-to-see-welcome-message",
+    "keyword": "Feature",
+    "name": "As an user I want to see Welcome message",
+    "description": "",
+    "line": 2,
+    "tags": [
+      {
+        "name": "@docker",
+        "line": 1
+      }
+    ],
+    "elements": [
+      {
+        "id": "as-an-user-i-want-to-see-welcome-message;verify-error-messages-of-username-input-and-password-input",
+        "keyword": "Scenario",
+        "name": "Verify error messages of username input and password input",
+        "description": "",
+        "line": 4,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@docker",
+            "line": 1
+          }
+        ],
+        "before": [
+          {
+            "output": [
+              "Pre Condition"
+            ],
+            "match": {
+              "location": "features/support/hook.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 43000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "Enter given url and click on signin link",
+            "line": 5,
+            "match": {
+              "location": "features/step_defnitions/test_docker.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14810789000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "Enter incorrect username and incorrect password",
+            "line": 6,
+            "match": {
+              "location": "features/step_defnitions/test_docker.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13729277000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "Verify error messages",
+            "line": 7,
+            "match": {
+              "location": "features/step_defnitions/test_docker.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1263644000
+            }
+          }
+        ],
+        "after": [
+          {
+            "output": [
+              "Post Condition"
+            ],
+            "match": {
+              "location": "features/support/hook.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 68000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -26,4 +26,14 @@ jobs:
                 path: ~/cucumber
             - store_artifacts:
                 path: ~/cucumber
-         
+
+              - run:
+                  name: Save Report
+                  command: |
+
+                    bundle exec cucumber --format pretty --format html --out ~/report/Automation_Full_Report.html
+                  when: always
+              - store_test_results:
+                  path: ~/report
+              - store_artifacts:
+                  path: ~/report

@@ -1,4 +1,4 @@
 web: -t @web
 mobile: -t @mobile
 console: -t @console
-docker: -t @docker
+docker: -t @docker -f json -o ./report/report<%= ENV['TEST_ENV_NUMBER'] %>_report.json --format html --out ./report/report<%= ENV['TEST_ENV_NUMBER'] %>.html

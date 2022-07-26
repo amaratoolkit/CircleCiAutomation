@@ -8,3 +8,4 @@ gem 'parallel_tests'
 gem 'webdrivers'
 gem 'capybara'
 gem "reportportal"
+gem "report_builder"
