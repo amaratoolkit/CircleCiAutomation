@@ -17,9 +17,9 @@ end
 
 at_exit do
   ReportBuilder.configure do |config|
-   config.json_path = "/Users/shiva/Documents/Documents/CircleCI/CircleCiAutomation/report/"
-   config.input_path = "/Users/shiva/Documents/Documents/CircleCI/CircleCiAutomation/report/"
-   config.report_path = "/Users/shiva/Documents/Documents/CircleCI/CircleCiAutomation/report/Automation_Full_Report"
+   config.json_path = "./report/"
+   config.input_path = "./report/"
+   config.report_path = "./report/Automation_Full_Report"
    config.report_types = [:html]
    config.report_title = "Android Automation Report"
    config.color = "cyan"
